@@ -29,4 +29,10 @@ class StringCalculatorShould {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(8, stringCalculator.add("2,2\n4"));
     }
+    
+    @Test
+    void string_withcustom_delimeterandnewline_numbers_should_return_their_sum_as_int() {
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(3, stringCalculator.add("//;\n1;2"));
+    }
 }
