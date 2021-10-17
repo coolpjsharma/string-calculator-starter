@@ -6,7 +6,7 @@ class StringCalculator {
     	if(input.isEmpty())
         return 0;
     	else if(input.contains(",")) {
-    		String[] numbers = input.split(",|\n");
+    		String[] numbers = number_extractor(input);
     		int result=0;
     		for(int i=0; i<numbers.length; i++ ) {
     			result +=Integer.parseInt(numbers[i]);
@@ -15,6 +15,11 @@ class StringCalculator {
      	}
     	else
     		return Integer.parseInt(input);
+    }
+    
+    private static String[] number_extractor(String input) {
+    	String[] numbers = input.split(",|\n");
+    	return numbers;
     }
 
 }
