@@ -13,12 +13,14 @@ class StringCalculator {
 		if(input.isEmpty())
 			return 0;
 		if(input.startsWith("M")) {
-			String[] numbers = number_extractor(input);
+			String[] numbers = input.split("M|,");
 			int result=0;
-			for(int i=0; i<numbers.length; i++ ) {
+			for(int i=1; i<numbers.length; i++ ) {
+			
 				result +=3*Integer.parseInt(numbers[i]);
-				return result;
+				
 			}
+			return result;
 		}
 		else {
 			String[] numbers = number_extractor(input);
@@ -40,7 +42,7 @@ class StringCalculator {
 				throw new RuntimeException("No negatives allowed and negative numbers are"+negatives);
 			}
 		}
-		return 0;
+	
 
 	}
 
