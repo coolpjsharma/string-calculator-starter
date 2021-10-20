@@ -36,9 +36,15 @@ class StringCalculatorShould {
         assertEquals(3, stringCalculator.add("//;\n1;2"));
     }
     
+//    @Test
+//    void string_withnegatives_should_throwException() {
+//        StringCalculator stringCalculator = new StringCalculator();
+//        stringCalculator.add("1,-2");
+//    }
+    
     @Test
-    void string_withnegatives_should_throwException() {
+    void string_startingwithM_should_returnsum() {
         StringCalculator stringCalculator = new StringCalculator();
-        stringCalculator.add("1,-2");
+        assertEquals(21, stringCalculator.add("M1,4,2"));
     }
 }
